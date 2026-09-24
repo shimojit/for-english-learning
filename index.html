@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="音から少しずつ始める英語学習。フォニックスと単語を練習しましょう。" />
+    <title>English Learning | 音からはじめる英語</title>
+  </head>
+  <body>
+    <header><a href="/" class="brand">English Learning<span>毎日、少しずつ。</span></a></header>
+    <main>
+      <section class="intro"><p class="eyebrow">LET’S LEARN TOGETHER</p><h1>音からはじめる、<br />英語の一歩。</h1><p>文字と音をつなげて、身近な単語から練習しましょう。</p><a class="button" href="#lessons">教材を見る</a></section>
+      <section id="lessons" aria-labelledby="lessons-heading">
+        <div class="section-heading"><h2 id="lessons-heading">フォニックスの教材</h2><button hx-get="/api/fragments/lessons" hx-target="#lesson-list" hx-disabled-elt="this" hx-indicator="#loading">再読み込み</button></div>
+        <p id="loading" class="htmx-indicator" role="status">読み込み中…</p>
+        <div id="lesson-list" aria-live="polite" hx-get="/api/fragments/lessons" hx-trigger="load"><p>教材を読み込んでいます…</p></div>
+        <noscript>教材の読み込みにはJavaScriptを有効にしてください。</noscript>
+      </section>
+      <section aria-labelledby="practice-heading"><h2 id="practice-heading">単語カードで練習</h2><div id="practice-card"></div></section>
+    </main>
+    <footer>English Learning · 自分のペースで学ぼう。</footer>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

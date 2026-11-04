@@ -4,5 +4,5 @@
   "main": "worker/index.ts",
   "compatibility_date": "2026-09-01",
   "assets": { "directory": "./dist", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
-  "services": [{ "binding": "API", "service": "english-learning-api" }]
+  "services": [{ "binding": "API", "service": "api-for-cloudflare" }]
 }
